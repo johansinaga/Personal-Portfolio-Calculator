@@ -34,9 +34,7 @@ for my_share in shares:
 	# Calculation
 	lastMonthClosePrice = float(symbol_data['close'][0])
 	yesterdayClosePrice = float(symbol_data['close'][-2])
-	ChangePercent = float(yesterdayClosePrice - lastMonthClosePrice)
-	
-	
+	ChangePercent = float((yesterdayClosePrice - lastMonthClosePrice)/lastMonthClosePrice*100)
 	
 	# Print output	
 	if yesterdayClosePrice < lastMonthClosePrice:		# print in red
