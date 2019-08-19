@@ -54,12 +54,23 @@ for my_share in shares:
     _1WeeksAgoPrice = symbol_data['close'][index1weeks]
     yesterdayClosePrice = symbol_data['close'][indexYesterday]
 
-    for i in range(-11, 0):
-        print (symbol_data['close'][i])
+    priceChangeList = []
+
+    dayIndex = 10
+    index = 0
+    for i in range(-11, -1):
+        priceThisDay = symbol_data['close'][i]
+        priceNextDay = symbol_data['close'][i+1]
+        priceChange = priceNextDay - priceThisDay
+        priceChangePercent = priceChange/priceThisDay*100
+
+        priceChangeList.insert(index, float(priceChangePercent))
+        dayIndex-=1
+        index+=1
 
 	# TODO: Print 1m change, and then daily change from last 10 days
 
-
+    print (priceChangeList)     # This List Contains Performance of the last 10 days
 
 	################################################################	Handling if no price history can be found at certain date using a function
     lastMonthClosePrice = correctPrice(lastMonthClosePrice)
@@ -95,3 +106,4 @@ for my_share in shares:
     print('{}{:<15}{:6.2f}\t\t{:6.2f}\t\t{}{:6.2f}\t\t{}{:6.2f}\t\t{}{:6.2f}{}'.format
           (formatColorWhite, my_share, lastMonthClosePrice, yesterdayClosePrice, formatColor1m, _1MonthChangePercent,
            formatColor2w, _2WeeksChangePercent, formatColor1w, _1WeeksChangePercent, formatColorWhite))
+    print ()
