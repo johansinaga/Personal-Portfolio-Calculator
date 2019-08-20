@@ -20,6 +20,13 @@ def correctPrice(price):
             newIndex = newIndex -1
     return float(price)
 
+def determineColor(priceChange):
+    if (priceChange < 0):
+        formatColor = formatColorRed
+    else:
+        formatColor = formatColorGreen
+    return formatColor
+
 # Initialize colorama for coloring
 init()
 
@@ -31,7 +38,7 @@ shares = [
     ]
 
 # Print header
-print(('\033[1;37;40mTICKER\t   Last Month Price   Yesterday Price\t1m Change %\t2w Change %\t1w Change %'))
+print(('\033[1;37;40mTICKER\t   Last Month Price   Today Price    1m Change %\td-9(%)\td-8(%)\td-7(%)\td-6(%)\td-5(%)\td-4(%)\td-3(%)\td-2(%)\td-1(%)\t Today'))
 
 for my_share in shares:
     my_share_date = share.Share(my_share)
@@ -50,9 +57,8 @@ for my_share in shares:
 
     # Calculation
     lastMonthClosePrice = symbol_data['close'][0]
-    _2WeeksAgoPrice = symbol_data['close'][index2weeks]
-    _1WeeksAgoPrice = symbol_data['close'][index1weeks]
     yesterdayClosePrice = symbol_data['close'][indexYesterday]
+    todayPrice = symbol_data['close'][indexToday]
 
     priceChangeList = []
 
@@ -68,42 +74,43 @@ for my_share in shares:
         dayIndex-=1
         index+=1
 
-	# TODO: Print 1m change, and then daily change from last 10 days
-
-    print (priceChangeList)     # This List Contains Performance of the last 10 days
-
-	################################################################	Handling if no price history can be found at certain date using a function
     lastMonthClosePrice = correctPrice(lastMonthClosePrice)
-    _2WeeksAgoPrice = correctPrice(_2WeeksAgoPrice)
-    _1WeeksAgoPrice = correctPrice(_1WeeksAgoPrice)
     yesterdayClosePrice = correctPrice(yesterdayClosePrice)
-	################################################################
+
+    # Getting the price changes of the last 10 days
+    d_9=priceChangeList[0]
+    d_8=priceChangeList[1]
+    d_7=priceChangeList[2]
+    d_6=priceChangeList[3]
+    d_5=priceChangeList[4]
+    d_4=priceChangeList[5]
+    d_3=priceChangeList[6]
+    d_2=priceChangeList[7]
+    d_1=priceChangeList[8]
+    d_0=priceChangeList[9]
 
 
-    _1MonthChangePercent = float((yesterdayClosePrice - lastMonthClosePrice)/lastMonthClosePrice*100)
-    _2WeeksChangePercent = float((yesterdayClosePrice - _2WeeksAgoPrice)/_2WeeksAgoPrice*100)
-    _1WeeksChangePercent = float((yesterdayClosePrice - _1WeeksAgoPrice)/_1WeeksAgoPrice*100)
-    
-    todayPrice = float(symbol_data['close'][indexToday])
+    _1MonthChangePercent = float((todayPrice - lastMonthClosePrice)/lastMonthClosePrice*100)
 
 
 	# Determine Color Format based on %
-    if (_1MonthChangePercent < 0):
-        formatColor1m = formatColorRed
-    else:
-        formatColor1m = formatColorGreen
-    if (_2WeeksChangePercent < 0):
-        formatColor2w = formatColorRed
-    else:
-        formatColor2w = formatColorGreen
-    if (_1WeeksChangePercent < 0):
-        formatColor1w = formatColorRed
-    else:
-        formatColor1w = formatColorGreen
+    formatColor1m = determineColor(_1MonthChangePercent)
+    formatcolor_d_9 = determineColor(d_9)
+    formatcolor_d_8 = determineColor(d_8)
+    formatcolor_d_7 = determineColor(d_7)
+    formatcolor_d_6 = determineColor(d_6)
+    formatcolor_d_5 = determineColor(d_5)
+    formatcolor_d_4 = determineColor(d_4)
+    formatcolor_d_3 = determineColor(d_3)
+    formatcolor_d_2 = determineColor(d_2)
+    formatcolor_d_1 = determineColor(d_1)
+    formatcolor_d_0 = determineColor(d_0)
 
 
 	# Print output
-    print('{}{:<15}{:6.2f}\t\t{:6.2f}\t\t{}{:6.2f}\t\t{}{:6.2f}\t\t{}{:6.2f}{}'.format
-          (formatColorWhite, my_share, lastMonthClosePrice, yesterdayClosePrice, formatColor1m, _1MonthChangePercent,
-           formatColor2w, _2WeeksChangePercent, formatColor1w, _1WeeksChangePercent, formatColorWhite))
-    print ()
+    print('{}{:<15}{:6.2f}\t\t{:6.2f}\t      {}{:6.2f}\t      {}{:6.2f}  {}{:6.2f}  {}{:6.2f}  {}{:6.2f}  '
+          '{}{:6.2f}  {}{:6.2f}  {}{:6.2f}  {}{:6.2f}  {}{:6.2f}    {}{:6.2f}{}'.format
+          (formatColorWhite, my_share, lastMonthClosePrice, todayPrice, formatColor1m, _1MonthChangePercent,
+           formatcolor_d_9, d_9, formatcolor_d_8, d_8, formatcolor_d_7, d_7, formatcolor_d_6, d_6, formatcolor_d_5, d_5,
+           formatcolor_d_4, d_4, formatcolor_d_3, d_3, formatcolor_d_2, d_2, formatcolor_d_1, d_1, formatcolor_d_0, d_0,
+           formatColorWhite))
