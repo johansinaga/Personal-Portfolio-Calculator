@@ -32,9 +32,10 @@ init()
 
 # Inserting shares			//TODO: use config file?
 shares = [
-    'ACB', 'PDD', 'YUMC', 'ACN', 'PEP',
-    'DSM.AS', 'LIGHT.AS', 'RDSA.AS', 'T', 'BABA',
-    'ABN.AS', 'VWRL.AS', 'NN.AS', 'SPOT', 'AAPL'
+    'PDD', 'ACB', 'YUMC', 'ACN', 'ASML.AS',
+    'DSM.AS', 'PEP', 'RDSA.AS', 'LIGHT.AS', 'ABN.AS',
+    'BABA', 'T', 'SPOT', 'NN.AS', 'VWRL.AS',
+	'AAPL'
     ]
 
 # Print header
