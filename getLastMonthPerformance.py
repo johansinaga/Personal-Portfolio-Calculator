@@ -1,4 +1,5 @@
 import sys
+import configparser
 from yahoo_finance_api2 import share
 from yahoo_finance_api2.exceptions import YahooFinanceError
 from colorama import init
@@ -30,13 +31,15 @@ def determineColor(priceChange):
 # Initialize colorama for coloring
 init()
 
-# Inserting shares			//TODO: use config file?
-shares = [
-    'PDD', 'ACB', 'YUMC', 'ACN', 'ASML.AS',
-    'DSM.AS', 'PEP', 'RDSA.AS', 'LIGHT.AS', 'ABN.AS',
-    'BABA', 'T', 'SPOT', 'NN.AS', 'VWRL.AS',
-	'AAPL'
-    ]
+# Inserting shares
+configParser = configparser.RawConfigParser()
+configFilePath = r'portfolioConfig.txt'
+configParser.read(configFilePath)
+
+allTickers = configParser.items('Portfolio')
+shares = []
+for ticker in allTickers:
+	shares.append(ticker[1])
 
 # Print header
 print(('\033[1;37;40mTICKER\t   Last Month Price   Today Price    1m Change %\td-9(%)\td-8(%)\td-7(%)\td-6(%)\td-5(%)\td-4(%)\td-3(%)\td-2(%)\td-1(%)\t Today'))

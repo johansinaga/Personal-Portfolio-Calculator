@@ -1,0 +1,17 @@
+[Portfolio]
+ticker1 = YUMC
+ticker2 = ACN
+ticker3 = ASML.AS
+ticker4 = PEP
+ticker5 = RDSA.AS
+ticker6 = DSM.AS
+ticker7 = ABN.AS
+ticker8 = LIGHT.AS
+ticker9 = T
+ticker10 = ACB
+ticker11 = BABA
+ticker12 = NN.AS
+ticker13 = SPOT
+ticker14 = PDD
+ticker15 = VWRL.AS
+ticker16 = AAPL
