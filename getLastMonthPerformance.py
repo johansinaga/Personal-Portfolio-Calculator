@@ -1,5 +1,6 @@
 import sys
 import configparser
+import datetime
 from yahoo_finance_api2 import share
 from yahoo_finance_api2.exceptions import YahooFinanceError
 from colorama import init
@@ -7,6 +8,7 @@ from colorama import init
 formatColorWhite = '\033[1;37;40m'
 formatColorRed = '\033[1;31;40m'
 formatColorGreen = '\033[1;32;40m'
+formatColorYellow = '\33[93m'
 
 index2weeks = -11
 index1weeks = -6
@@ -42,7 +44,9 @@ for ticker in allTickers:
 	shares.append(ticker[1])
 
 # Print header
-print(('\033[1;37;40mTICKER\t   Last Month Price   Today Price    1m Change %\td-9(%)\td-8(%)\td-7(%)\td-6(%)\td-5(%)\td-4(%)\td-3(%)\td-2(%)\td-1(%)\t Today'))
+datetimeNow = datetime.datetime.now().isoformat(sep='\t', timespec='seconds')
+print ('{}{}'.format (formatColorYellow, datetimeNow))
+print (formatColorWhite + 'TICKER\t   Last Month Price   Today Price    1m Change %\td-9(%)\td-8(%)\td-7(%)\td-6(%)\td-5(%)\td-4(%)\td-3(%)\td-2(%)\td-1(%)\t Today')
 
 for my_share in shares:
     my_share_date = share.Share(my_share)
