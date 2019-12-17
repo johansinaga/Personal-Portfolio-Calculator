@@ -15,3 +15,5 @@ ticker13 = SPOT
 ticker14 = PDD
 ticker15 = VWRL.AS
 ticker16 = AAPL
+ticker17 = MCD
+ticker16 = INGA.AS
