@@ -1,4 +1,5 @@
 [Portfolio]
+ticker0 = IUSP.AS
 ticker1 = YUMC
 ticker2 = ACN
 ticker3 = PEP
