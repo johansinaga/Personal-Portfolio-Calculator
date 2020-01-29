@@ -26,8 +26,10 @@ def correctPrice(price):
 def determineColor(priceChange):
     if (priceChange < 0):
         formatColor = formatColorRed
-    else:
+    elif (priceChange > 0):
         formatColor = formatColorGreen
+    else:
+        formatColor = formatColorWhite
     return formatColor
 
 # Initialize colorama for coloring
@@ -75,8 +77,12 @@ for my_share in shares:
     for i in range(-11, -1):
         priceThisDay = symbol_data['close'][i]
         priceNextDay = symbol_data['close'][i+1]
-        priceChange = priceNextDay - priceThisDay
-        priceChangePercent = priceChange/priceThisDay*100
+        if (priceThisDay == None or priceNextDay == None):
+            priceChange = 0
+            priceChangePercent = 0
+        else:
+            priceChange = priceNextDay - priceThisDay
+            priceChangePercent = priceChange/priceThisDay*100
 
         priceChangeList.insert(index, float(priceChangePercent))
         dayIndex-=1
