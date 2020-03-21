@@ -1,21 +1,22 @@
 [Portfolio]
 ticker0 = IUSP.AS
-ticker10 = ACB
 ticker7 = ABN.AS
-ticker14 = INGA.AS
 ticker2 = ACN
 ticker8 = LIGHT.AS
-ticker6 = ASML.AS
-ticker5 = DSM.AS
 ticker3 = PEP
-ticker4 = RDSA.AS
+ticker5 = DSM.AS
+ticker6 = ASML.AS
 ticker12 = NN.AS
 ticker9 = T
 ticker11 = MCD
+ticker20 = JPM
 ticker13 = BABA
 ticker15 = SPOT
 ticker1 = YUMC
 ticker16 = PDD
+ticker10 = ACB
+ticker14 = INGA.AS
 ticker17 = VUSA.AS
+ticker4 = RDSA.AS
 ticker18 = AAPL
 ticker19 = VWRL.AS
