@@ -1,11 +1,15 @@
 [Portfolio]
-ticker1 = WFC
-ticker2 = PM
-ticker3 = FB
-ticker4 = AMZN
-ticker5 = GOOG
-ticker6 = GOOGL
-ticker7 = TSLA
-ticker8 = DIS
-ticker9 = MSFT
-ticker10 = NVDA
+ticker1 = ZNGA
+ticker2 = WFC
+ticker3 = ORCL
+ticker4 = PM
+ticker5 = DIS
+ticker6 = CRM
+ticker7 = MSFT
+ticker8 = FB
+ticker9 = NVDA
+ticker10 = NFLX
+ticker11 = TSLA
+ticker12 = GOOG
+ticker13 = AMZN
+ticker14 = BKNG
