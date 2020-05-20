@@ -10,6 +10,5 @@ ticker8 = FB
 ticker9 = NVDA
 ticker10 = NFLX
 ticker11 = TSLA
-ticker12 = GOOG
+ticker12 = BKNG
 ticker13 = AMZN
-ticker14 = BKNG
