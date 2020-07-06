@@ -1,14 +1,15 @@
 [Portfolio]
 ticker1 = ZNGA
-ticker2 = WFC
-ticker3 = ORCL
-ticker4 = PM
-ticker5 = DIS
-ticker6 = CRM
-ticker7 = MSFT
-ticker8 = FB
-ticker9 = NVDA
-ticker10 = NFLX
-ticker11 = TSLA
-ticker12 = BKNG
-ticker13 = AMZN
+ticker2 = SPCE
+ticker3 = WFC
+ticker4 = ORCL
+ticker5 = PM
+ticker6 = DIS
+ticker7 = CRM
+ticker8 = MSFT
+ticker9 = FB
+ticker10 = NVDA
+ticker11 = NFLX
+ticker12 = TSLA
+ticker13 = BKNG
+ticker14 = AMZN
