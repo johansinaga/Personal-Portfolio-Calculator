@@ -9,6 +9,7 @@ ticker21 = KO
 ticker20 = JPM
 ticker6 = ASML.AS
 ticker12 = NN.AS
+ticker24 = SPCE
 ticker9 = T
 ticker13 = BABA
 ticker2 = ACN
