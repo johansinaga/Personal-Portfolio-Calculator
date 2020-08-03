@@ -1,5 +1,4 @@
 [Portfolio]
-ticker0 = IUSP.AS
 ticker23 = IWDA.AS
 ticker7 = ABN.AS
 ticker3 = PEP
