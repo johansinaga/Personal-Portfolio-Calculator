@@ -6,6 +6,7 @@ ticker3 = PEP
 ticker21 = KO
 ticker5 = DSM.AS
 ticker6 = ASML.AS
+ticker25 = SQ
 ticker12 = NN.AS
 ticker9 = T
 ticker8 = LIGHT.AS
