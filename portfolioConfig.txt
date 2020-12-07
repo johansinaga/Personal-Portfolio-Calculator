@@ -1,12 +1,15 @@
 [Portfolio]
 ticker1 = ZNGA
 ticker2 = WFC
+ticker14 = NVTA
 ticker3 = ORCL
 ticker4 = PM
 ticker5 = DIS
+ticker15 = APPN
 ticker6 = MSFT
 ticker7 = CRM
 ticker8 = FB
+ticker16 = ROKU
 ticker12 = TSLA
 ticker9 = NFLX
 ticker10 = NVDA
