@@ -13,4 +13,5 @@ ticker18 = AAPL
 ticker13 = BABA
 ticker16 = PDD
 ticker24 = SPCE
+ticker25 = TSLA
 ticker22 = GOOGL
