@@ -2,13 +2,8 @@
 ticker10 = ACB
 ticker23 = IWDA.AS
 ticker7 = ABN.AS
-ticker21 = KO
-ticker9 = T
 ticker6 = ASML.AS
 ticker25 = SQ
-ticker2 = ACN
-ticker1 = YUMC
-ticker11 = MCD
 ticker4 = RDSA.AS
 ticker14 = INGA.AS
 ticker17 = VUSA.AS
