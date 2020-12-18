@@ -1,5 +1,6 @@
 [Portfolio]
 ticker1 = ZNGA
+ticker16 = DBX
 ticker2 = WFC
 ticker3 = NVTA
 ticker4 = ORCL
