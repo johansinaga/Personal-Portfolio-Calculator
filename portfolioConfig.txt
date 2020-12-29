@@ -1,9 +1,7 @@
 [Portfolio]
-ticker1 = ACB
 ticker2 = IWDA.AS
 ticker3 = ABN.AS
 ticker4 = ASML.AS
-ticker5 = RDSA.AS
 ticker6 = INGA.AS
 ticker7 = VUSA.AS
 ticker8 = SPOT
