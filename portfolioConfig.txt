@@ -1,15 +1,15 @@
 [Portfolio]
 ticker2 = IWDA.AS
-ticker3 = ABN.AS
+ticker3 = CRSP
 ticker4 = ASML.AS
 ticker6 = INGA.AS
 ticker7 = VUSA.AS
 ticker8 = SPOT
-ticker9 = VWRL.AS
-ticker10 = TSLA
 ticker11 = AAPL
-ticker14 = SPCE
+ticker9 = AMZN
+ticker10 = TSLA
 ticker13 = SQ
 ticker15 = PDD
+ticker14 = SPCE
 ticker12 = BABA
 ticker16 = GOOGL
