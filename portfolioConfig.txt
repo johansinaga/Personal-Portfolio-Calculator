@@ -1,17 +1,19 @@
 [Portfolio]
 ticker1 = ZNGA
 ticker2 = DBX
+ticker15 = SPWR
 ticker3 = NVTA
 ticker4 = ORCL
+ticker17 = AMD
+ticker18 = TSM
 ticker5 = DIS
 ticker6 = APPN
-ticker7 = SE
 ticker8 = MSFT
 ticker9 = CRM
+ticker7 = SE
 ticker10 = FB
 ticker11 = ROKU
 ticker12 = NFLX
 ticker13 = NVDA
 ticker16 = SHOP
 ticker14 = BKNG
-ticker15 = AMZN
